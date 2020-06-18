@@ -1,0 +1,19 @@
+[package]
+name = "async-gitlib"
+description = "Asynchronous library with libgit2 artifacts."
+license = "MIT"
+version = "0.1.0"
+authors = ["Kristijan Sedlak <xpepermint@gmail.com>"]
+edition = "2018"
+documentation = "https://github.com/xpepermint/async-gitlib"
+homepage = "https://github.com/xpepermint/async-gitlib"
+repository = "https://github.com/xpepermint/async-gitlib"
+readme = "README.md"
+
+[dependencies]
+async-std = { version = "^1.6.0", features = ["unstable"] }
+git2 = "^0.13.6"
+
+[dev-dependencies]
+async-std = { version = "^1.6.0", features = ["attributes", "unstable"] }
+tempfile = "^3.1.0"
