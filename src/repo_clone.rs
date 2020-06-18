@@ -89,9 +89,10 @@ mod tests {
 
     #[async_std::test]
     async fn clones_public() {
-        let root = TempDir::new().unwrap().path().to_owned();
+        let source = "https://github.com/xpepermint/async-gitlib";
+        let target = TempDir::new().unwrap().path().to_owned();
         let clone = RepoClone::default();
-        clone.clone("https://github.com/xpepermint/async-gitlib", &root).await.unwrap();
-        assert!(root.join("Cargo.toml").exists());
+        clone.clone(source, &target).await.unwrap();
+        assert!(target.join("Cargo.toml").exists());
     }
 }

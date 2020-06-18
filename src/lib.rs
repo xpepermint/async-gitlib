@@ -1,12 +1,15 @@
-mod clone_repo;
+mod repo_clone;
+mod repo_init;
 
-pub use clone_repo::*;
+pub use git2::{Error, ErrorClass, ErrorCode};
+pub use repo_clone::*;
+pub use repo_init::*;
 
 // - RepoClone (`git clone`)
 // - RepoInit (`git init`)
 // - RepoBranch (`git branch|switch`)
 // - RepoTag (`git tag|switch`)
-// - RepoManager (`git add|mv|rm|restore|commit|rollback`)
+// - RepoStage (`git add|mv|rm|restore|commit|rollback`)
 // ```rs
 // let clone = RepoClone::new();
 // clone.set_hardlinks(hardlinks: CloneLocal);
