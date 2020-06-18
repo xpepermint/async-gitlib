@@ -91,7 +91,7 @@ mod tests {
     async fn clones_public() {
         let root = TempDir::new().unwrap().path().to_owned();
         let clone = RepoClone::default();
-        clone.clone("https://github.com/xpepermint/async-httplib", &root).await.unwrap();
+        clone.clone("https://github.com/xpepermint/async-gitlib", &root).await.unwrap();
         assert!(root.join("Cargo.toml").exists());
     }
 }
